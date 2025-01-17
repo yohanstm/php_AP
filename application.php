@@ -1,32 +1,33 @@
 <?php 
 
-class NomClass {
+class appVC {
     
-    // on declare les attribut ici 
-    private $monattribut; // 
 
         public function _construct()
         {
-            $this -> monattribut = 10;
+
         }
 
-        public function getMonattribut() // on veut qu'il soit compris entre 0 et 10
+        public function afficherpage($mapage) 
         {
-            return $this -> monattribut = 10;
+            if ($mapage == 1){ $this -> page1();}
+            else if ($mapage == 2) {$this -> page2();}
+            else  $this -> page_introuvable();
+            // else echo "c'est la premiere page ";
         }
 
-        public function setmonattribut($value)
-        {
-            if(($value >=0) && ($value < 10))
-            { 
-                $this -> monattribut = $value; 
-                
-            }
-            return $this -> monattribut;
-            
-            
-            
+
+        public function page1(){
+            echo "c'est la premiere page";
         }
+
+        public function page2(){
+            echo "c'est la deuxieme page";
+ 
     }
 
+    public function page_introuvable(){
+        echo "c'est la premierre page ";
+    }
+}
 ?>
